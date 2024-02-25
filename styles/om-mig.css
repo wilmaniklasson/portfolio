@@ -1,0 +1,77 @@
+/* Gemensamma stilar */
+#om-mig {
+  background-color: #fff;
+}
+
+.om-mig-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe6e4;
+  width: 80%;
+  height: 80%;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1%;
+}
+
+.om-mig-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.om-mig-grid-container h2 {
+  font-family: Times;
+  font-size: 2.5rem;
+  color: #337266;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.om-mig-text {
+  max-width: 30rem;
+  padding: 1rem;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Media Query för mindre skärmar */
+@media screen and (max-width: 768px) {
+  .om-mig-bg {
+      width: 90%;
+      height: 90%;
+  }
+
+  .om-mig-text {
+      padding: 0;
+      font-size: 1rem;
+  }
+
+  .profilbild {
+      margin-bottom: 0;
+  }
+
+  .profilbild > img {
+      width: 25%;
+      height: auto;
+  }
+
+  .om-mig-grid-container h2 {
+      font-size: 1.60rem;
+      padding-top: 2rem;
+  }
+
+  .om-mig-grid-container p {
+      padding: 0;
+      margin: 0;
+  }
+}
+
+/* Media Query för liggande surfplatta */
+@media screen and (max-height:500px) and (orientation: landscape) {
+  .om-mig-bg {
+      width: 100%;
+      height: 100%;
+  }
+}

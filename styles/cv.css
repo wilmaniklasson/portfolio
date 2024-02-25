@@ -1,0 +1,152 @@
+.cv-avsnitt {
+  background-color: #ffe6e4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  height: auto;
+}
+
+.cv-innehåll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.erfarenhet {
+  max-width: 20rem;
+  margin-bottom: 20px;
+}
+
+.erfarenhet h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.erfarenhet p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.erfarenhet .titel {
+  font-weight: bold;
+}
+
+.erfarenhet .företag {
+  font-style: italic;
+}
+
+.erfarenhet .tid {
+  color: #999;
+}
+
+.kurser {
+  margin-bottom: 20px;
+}
+
+.kurser h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.kurser ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.kurser ul li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.kurser ul li:before {
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; 
+}
+
+.kurser-programmering ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.avklarad {
+  color: #4CAF50;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  vertical-align: middle; 
+  margin-right: 0.5em; 
+}
+
+.kompetenser h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+  text-align: center;
+}
+
+.profilbild {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profilbild img {
+  width: 20%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profilbild img:hover {
+  transform: rotate(360deg);
+}
+
+.cv-innehåll {
+  margin-bottom: 20px;
+}
+
+.utbildning h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.utbildning p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.utbildning .titel {
+  font-weight: bold;
+}
+
+.utbildning .institution {
+  font-style: italic;
+}
+
+.utbildning .tid {
+  color: #999;
+}
+
+@media screen and (max-width: 768px) {
+  .profilbild img {
+    width: 40%;
+  }
+  .färdighetsbilder img {
+    width: 80%;
+  }
+  
+}
+
+.färdighetsbilder {
+  display: flex;
+  justify-content: center;
+}

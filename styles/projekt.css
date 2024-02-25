@@ -1,0 +1,184 @@
+#projekt {
+    background-color: #fffefe;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .projekt-bg {
+    background-color: #337266;
+    width: 80%;
+    height: 80%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 1%;
+  }
+  
+  .projekt-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+  }
+  
+  
+  
+  .projekt-grid-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .bild img {
+      height: auto;
+      margin-bottom: 10px;
+      max-width: 50px; 
+    }
+    
+
+
+
+
+/* Projektstilar */
+.projekt-section {
+    text-align: center;
+    padding: 50px;
+}
+
+.projekt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projekt {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0.5rem;
+    height: 18rem;
+    align-items: center;
+}
+
+.projekt div {
+    padding: 1px;
+ 
+    text-align: center; 
+}
+
+.projekt img {
+    display: inline-block;
+    width: 68%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.projekt img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.projekt p {
+
+    margin: 5px;
+    padding: 5px;
+    color: #666;
+}
+
+.projekt h3 {
+    margin: 0px;
+    color: #337266;
+}
+
+
+
+
+
+
+
+
+
+/* Media Query för mindre skärmar */
+@media only screen and (max-width: 768px) {
+    .projekt-container {
+        flex-direction: column;
+    }
+
+    .projekt {
+        margin: 2rem 0.3rem 2rem 0.3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projekt {
+        max-height:  31vh;
+        padding: 5px 10px 0px 10px;
+    }
+
+    .projekt h3 {
+        font-size: 1rem;
+    }
+
+    
+    
+    #projekt {
+        
+        margin: 0;
+        background-color: #337266;
+    }
+    
+}
+
+/* Media Query för ännu mindre skärmar */
+@media screen and (max-width: 400px) {
+    .projekt img {
+        height: 95%;
+    }
+
+    .projekt a:active img {
+        transform: scale(1.1); 
+    }
+
+    .projekt-image1 {
+        content: url("../img/projekt1-mobil.png");
+    }
+
+    .projekt-image2 {
+        content: url("../img/projekt2-mobil.png");
+    }
+
+    .projekt-image3 {
+        content: url("../img/projekt3-mobil.png");
+    }
+
+    .projekt {
+        margin: 8px;
+    }
+}
+
+/* Media Query för större skärmar */
+@media screen and (min-width: 768px) {
+    .bild {
+        width: auto; 
+        margin-right: 10px; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projekt-bg {
+        width: 100%;
+    }
+
+
+
+    .projekt-content > h2 {
+        margin: 0px;
+    }
+
+    .projekt-grid-container {
+        height: 100vh;
+    }
+}
