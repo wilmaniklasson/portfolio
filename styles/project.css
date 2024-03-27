@@ -28,7 +28,11 @@
     color: black;
     max-width: 300px;
     width: 90%;
-    height: 500px;
+    height: 450px;
+}
+
+.project p {
+    margin-bottom: auto;
 }
 
 
@@ -65,7 +69,7 @@
 .show-more {
     background-color: #5DBE8C;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
     border-radius: 7px;
     font-weight: 700;
