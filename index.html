@@ -1,223 +1,236 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Denna hemsida är en personlig portfolio för Wilma Niklasson, en frontend-utvecklare med passion för kreativ webbutveckling. Upptäck Wilmas projekt, erfarenheter och färdigheter inom HTML, CSS och JavaScript. Utforska hennes utbildning och karriärresa, och ta del av hennes entusiasm för att lära sig och utvecklas inom webbutveckling.">
-  <meta property="og:image" content="https://wilmaniklasson.se/img/url-bild.png">
-  <title>Wilma Niklasson - Frontend-utvecklare</title>
-  <link rel="icon" href="/img/avatar.svg" />
-  <link rel="stylesheet" href="styles/intro.css">
-  <link rel="stylesheet" href="styles/om-mig.css">
-  <link rel="stylesheet" href="styles/projekt.css">
-  <link rel="stylesheet" href="styles/cv.css">
-  <link rel="stylesheet" href="styles/animations.css">
-  <script type="module" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<meta name="description" content="Denna hemsida är en personlig portfolio för Wilma Niklasson, en frontend-utvecklare med passion för kreativ webbutveckling. Upptäck Wilmas projekt, erfarenheter och färdigheter inom HTML, CSS och JavaScript. Utforska hennes utbildning och karriärresa, och ta del av hennes entusiasm för att lära sig och utvecklas inom webbutveckling.">
+<meta property="og:image" content="/img/url-bild.png">
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/About.css">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/cv.css">
+    <script type="module" src="script.js"></script>
+    <title>Wilma Niklasson - Frontend-utvecklare</title>
+    <link rel="icon" href="/img/avatar.svg" />
 </head>
 <body>
+    <section class="intro">
+        <section class="container">
+            <asside class="navbar">
+                <div class="navbar-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <nav class="navigation-buttons">
+                  <a class="button" id="about" href="#aboutme">OM MIG</a>
+                  <a class="button" id="projects" href="#project">PROJEKT</a>
+                  <a class="button" id="cv" href="#CV">CV</a>
+                  <a class="button" id="english" href="english_version.html">ENGLISH</a>
+                </nav>
+            </asside> 
+            <div class="main-content">
+                <div class="text-content">
+                    <h1 class="greeting" id="animated-text">Hej! <br> mitt namn är</h1>
+                    <h2 class="name" id="animate-me">Wilma</h2>
+                    
+                </div>
+                <div class="profile-pic">
+                    <img src="img/avatar.svg" alt="Wilma">
+                </div>
+                <div class="speech-bubble">
+                    <div class="social-link">
+                        <a href="https://github.com/wilmaniklasson" target="_blank" rel="noopener">
+                            <img src="img/Github.svg" alt="github knapp" id="github">
+                            </a>
+                            <a href="https://www.linkedin.com/in/wilma-niklasson-5b3518192/" target="_blank" rel="noopener">
+                            <img src="img/LinkedIn.svg" alt="LinkedIn knapp" id="linkedin">
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description-section">
+            <p class="description">Jag är driven, lösningorienterad och en skicklig facilitator som främjar samarbete och gemensam problemlösning i teamet.</p>
+        </section>
 
-   <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="navbar-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <nav class="navigation-buttons">
-            <a href="#om-mig">Om mig</a>
-            <a href="#projekt">Projekt</a>
-            <a href="#KarriärochUtbildning">Karriär och Utbildning</a>
-            <a href="english_version.html">English Version</a> <!-- Länk till den engelska versionen -->
-        </nav>
-        <div class="logo">
-  
-          <a href="https://github.com/wilmaniklasson" target="_blank" rel="noopener">
-          <img src="img/Github.svg" alt="github knapp" id="github">
-          </a>
-          <a href="https://www.linkedin.com/in/wilma-niklasson-5b3518192/" target="_blank" rel="noopener">
-          <img src="img/LinkedIn.svg" alt="LinkedIn knapp" id="linkedin">
-          </a>
-        </div>
-        
-    </header> 
-
-    <!-- INTRO --> 
-    <section id="intro">
-      <div class="intro-bg">
-        <div class="intro-grid-container">
-          <div class="presentation">
-            <div class="hälsning"> 
-              <h1 class="animate-me">Hej! Jag heter Wilma</h1>
-            </div>
-            <div class="slogan"> 
-              <p>Jag är driven, lösningsorienterad och en skicklig facilitator som främjar samarbete och gemensam problemlösning i teamet.</p>
-            </div>
-          </div>
-    
-          <div class="målad-bild">
-            <img src="img/avatar.svg" alt="målad bild på Wilma">
-          </div>
-        </div>
-      </div>
     </section>
-    
-    <!-- OM MIG -->
-    <section id="om-mig">
-      <div class="om-mig-bg">
-        <div class="om-mig-grid-container">
-          <div class="om-mig-text">
-            <h2 >Om mig</h2> 
-            <p>Jag är en student inom frontend-utveckling med ett mål att göra en programmeringskarriär. För närvarande studerar jag på Handelsakademin Göteborg, där jag lär mig alla de nödvändiga färdigheterna och verktygen för att forma min framtid inom webbutveckling. Programmering är ett nyfunnet intresse som passar mig utmärkt eftersom det alltid finns nya saker att lära. Det jag gillar mest med programmering är kreativiteten och att det finns så många olika sätt att lösa ett problem på. Jag drivs av att lära mig nya saker och att utvecklas.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- KUNSKAP -->
-    
-    <section id="projekt">
-      <div class="projekt-bg">
-        <div class="projekt-content">
-          <div class="projekt-grid-container">
-            <div class="projekt-container">
-              <div class="projekt">
-                <div> 
-                  <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener">
-                    <img src="img/projekt3.png" alt="Pokémon team manager" class="projekt-image3">
-                  </a>
-                </div>
-                <div>
-                  <h3>Pokémon team manager</h3>
-                  <p>Sök efter Pokémon hämtat från ett API. Skapa ett lag genom att lägg till och ta bort Pokémon från ditt lag.</p>
-                </div>
-              </div>
-              <div class="projekt">
-                <div>
-                  <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener">
-                    <img src="img/projekt2.png" alt="Hangman" class="projekt-image2">
-                  </a>
-                </div>
-                <div>
-                  <h3>Hangman</h3>
-                  <p> Ett grupparbete JavaScript, HTML och CSS. Klassiskt hänga gubbe spel som sparar spelarens resultat lokalt.</p>
-                </div>
-              </div>
-              <div class="projekt">
-                <div>
-                  <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener">
-                    <img src="img/projekt1.png" alt="Bättre Webb" class="projekt-image1">
-                  </a>
-                </div>
-                <div>
-                  <h3>Bättre Webb</h3>
-                  <p> En webbplats för konferen bättre webb med HTML och CSS. Se seminarium och hanterar anmälningar.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+       <section id="aboutme" class='aboute-me'>
+            <h1>Vem är jag?</h1>
+            <p class='aboute-me-text'>Jag är en student inom frontend-utveckling med ett mål att göra en programmeringskarriär.För närvarande studerar jag på Handelsakademin Göteborg, där jag lär mig alla de nödvändiga  färdigheterna och verktygen för att form min framtid inom webbutveckling. Programmering är ett nyfunnet intresse som passar mig utmärkt eftersom det alltid finns nya saker att lära. Det jag gillar mest med programmering är kreativiteten och att det finns så många olika sätt att lösa ett problem på. Jag drivs av att lära mig nya saker och att utvecklas.</p>
+     
     </section>
 
-    <!-- KARRIÄR OCH UTBILDNING -->
-<section class="cv-avsnitt" id="KarriärochUtbildning">
-  <div class="cv-behållare">
-    <div class="cv-innehåll">
-      <div class="profilbild">
-        <img src="img/profilbild1.png" alt="Profilbild">
-      </div>
-      
-      <div class="utbildning">
-        <h3>Utbildning</h3>
-        <p>
-          <span class="titel">Frontend-utvecklare</span><br>
-          <span class="institut">NBI / Handelsakademin</span>, <span class="tid">2023 - pågående</span>
-        </p>
-      </div>
-  
-      <div class="kurser-programmering">
-        <h3>Kurser</h3>
-        <ul class="kurslista">
-          <li><span class="avklarad">&#10004;</span> HTML/CSS</li>
-          <li><span class="avklarad">&#10004;</span> JavaScript</li>
-          <li><span class="avklarad">&#10004;</span> Grafiska verktyg</li>
-          <li><span class="avklarad">&#10004;</span>UX och Usability</li>
-          <li><span class="avklarad">&#10004;</span>Agila metoder</li>
-          <li>JavaScript-fördjupning</li>
-          <li>Testning</li>
-          <li>Fullstackutveckling</li>
-          <li>LIA 1 och LIA 2</li>
-          <li>Examensarbete</li>
-        </ul>
-      </div>
-    </div>
-    <div class="kompetenser">
-      <h3>Kompetenser</h3>
-      <div class="färdighetsbilder">
-        <div class="bild">
-          <img src="img/html.svg" alt="HTML-ikon">
-        </div>
-        <div class="bild">
-          <img src="img/css.svg" alt="CSS-ikon">
-        </div>
-        <div class="bild">
-          <img src="img/js.svg" alt="JavaScript-ikon">
-        </div>
-        <div class="bild">
-          <img src="img/git.svg" alt="Git-ikon">
-        </div>
-        <div class="bild">
-          <img src="img/Github2.svg" alt="GitHub-ikon">
-        </div>
-        <div class="bild">
-          <img src="img/Figma.svg" alt="Figma-ikon">
-        </div>
-      </div>
-    </div>
-  
-    <div class="cv-innehåll">
-      <div class="utbildning">
-        <h3>Utbildning</h3>
-        <p>
-          <span class="titel">Säljare B2B (Account Manager)</span><br>
-          <span class="institut">Stockholm School of Business</span>, <span class="tid">2019 - 2021</span>
-        </p>
-      </div>
-  
-      <div class="kurser">
-        <h3>Några av de kurser jag läste:</h3>
-        <ul>
-          <li>Affärsengelska</li>
-          <li>Affärskommunikation</li>
-          <li>Customer Relationship Management</li>
-          <li>Försäljning i digitala kanaler</li>
-          <li>Komplex och konsultativ försäljning</li>
-          <li>Affärsekonomi och entreprenörskap</li>
-          <li>Offentlig upphandling</li>  
-        </ul>
-      </div>
-  
-      <div class="erfarenhet">
-        <h3>Arbetslivserfarenhet</h3>
-        <p>
-          <span class="titel">Gruppledare</span><br>
-          <span class="företag">Hornbach Göteborg</span>, <span class="tid">2023</span><br>
-          Styrning av varuflöde från och till godsmottagningen.<br>
-          Ansvar för mailbox och struktur. Förmedla information till medarbetare om nya riktlinjer, arbetsätt och system. Inarbetning av nya medarbetare.<br>
-          Upprätthållande av allmänna preventionsåtgärder och förhållningsregler.
-        </p>
-        <p>
-          <span class="titel">Godsmottagare</span><br>
-          <span class="företag">Hornbach Göteborg</span>, <span class="tid">2021 - 2023</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            <section class='Projects' id="project">
+                <h2>Några av mina Projekt</h2>
+                <div class='project-container'>
+                <div class='project'>
+                    <div class='project-image'>
+                        <a href="https://wilmaniklasson.github.io/Notes/" target="_blank" rel="noopener noreferrer">
+                            <img src="img/Note.svg" alt="En bild på webbappen Notes" />
+                        </a>
+                    </div>
+                    <h3>Notes</h3>
+                    <p>Skapa och ta bort anteckningar. Växla mellan mörkt och ljust läge. Sök anteckningar med sökfältet. Anteckningarna lagras lokalt i webbläsaren.</p>
+                    <div class='button-container'>
+                        <a href="https://github.com/wilmaniklasson/Notes" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                        <a href="https://wilmaniklasson.github.io/Notes/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
 
+                    </div>
+                </div>
+                    <div class='project'>
+                    <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Pokemon.svg" alt="En bild på webbappen Pokémon team manager" />
+                        </a>
+                    
+                        </div>
+                    
+                        <h3>Pokémon team manager</h3>
+                        <p>Sök efter Pokémon från ett externt API. Lägg till och ta bort Pokémon i ditt lag och flytta till reservlistan.</p>
 
-</body>
-</html>
+                        <div class='button-container'>
+                        <a href="https://github.com/wilmaniklasson/Poke_manager" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                        <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
 
-  
- 
+                    </div>
+                    </div>
+                    <div class='project'>
+                    <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener noreferrer">
+                    <img src="img/Hangman.svg" alt="En bild på webbappen Hangman" />
+                        </a>
+                    
+                        </div>
+                    
+                        <h3>Hangman</h3>
+                        <p>Ett grupparbete som kombinerar JavaScript, HTML och CSS.Klassiskt hänga gubbe spel som sparar spelarens resultat lokalt.</p>
+                        <div class='button-container'>
+                        <a href="https://github.com/wilmaniklasson/Hangman" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                        <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                        </div>
+                    </div>
+                    <div class='project'>
+                    <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener noreferrer">
+                    <img src="img/Bättrewebb.svg" alt="En bild på webbappen Bättre webb" />
+                    </a>
+                        
+                        </div>
+                        <h3>Bättre Webb</h3>
+                        <p>En webbplats för konferansen 'Bättre webb' som utvecklats med HTML och CSS som en del av den första kursen på min utbildning.</p>
+                        <div class='button-container'>
+                        <a href="https://github.com/wilmaniklasson/CreativeCodeNest" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                        <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                        </div>
+                       
+                    </div>
+                </div>
+               
+
+            </section>
+            <section class="cv-section" id="CV">
+              <div class="cv-container">
+                  <div class="cv-content">
+                      <div class="profile-picture">
+                          <img src="img/profilbild1.png" alt="Profile Picture">
+                      </div>
+                      
+                      <div class="education">
+                      <h3>Utbildning</h3>
+                      <p>
+                        <span class="title">Frontend-utvecklare</span><br>
+                        <span class="institute">NBI / Handelsakademin</span>, <span class="time">2023 - pågående</span>
+                      </p>
+                    </div>
+                
+                    <div class="programming-courses">
+                      <h3>Kurser</h3>
+                      <ul class="course-list">
+                        <li><span class="completed">&#10004;</span> HTML/CSS</li>
+                        <li><span class="completed">&#10004;</span> JavaScript</li>
+                        <li><span class="completed">&#10004;</span> Grafiska verktyg</li>
+                        <li><span class="completed">&#10004;</span>UX och Usability</li>
+                        <li><span class="completed">&#10004;</span>Agila metoder</li>
+                        <li>JavaScript-fördjupning</li>
+                        <li>Testning</li>
+                        <li>Fullstackutveckling</li>
+                        <li>LIA 1 och LIA 2</li>
+                        <li>Examensarbete</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="skills">
+                    <h3>Kompetenser</h3>
+                    <div class="skill-images">
+                      <div class="image">
+                          <img src="img/html.svg" alt="HTML Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                      <div class="image">
+                          <img src="img/css.svg" alt="CSS Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                      <div class="image">
+                          <img src="img/js.svg" alt="JavaScript Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                      <div class="image">
+                          <img src="img/git.svg" alt="Git Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                      <div class="image">
+                          <img src="img/Github2.svg" alt="GitHub Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                      <div class="image">
+                          <img src="img/Figma.svg" alt="Figma Icon" style="max-width: 50px; max-height: 50px;">
+                      </div>
+                  </div>
+                  </div>
+                  
+                
+                  <div class="cv-content">
+                    <div class="education">
+                      <h3>Utbildning</h3>
+                      <p>
+                        <span class="titel">Säljare B2B (Account Manager)</span><br>
+                        <span class="institut">Stockholm School of Business</span>, <span class="time">2019 - 2021</span>
+                      </p>
+                    </div>
+                
+                    <div class="courses">
+                      <h3>Några av de kurser jag läste:</h3>
+                      <ul>
+                        <li>Affärsengelska</li>
+                        <li>Affärskommunikation</li>
+                        <li>Customer Relationship Management</li>
+                        <li>Försäljning i digitala kanaler</li>
+                        <li>Komplex och konsultativ försäljning</li>
+                        <li>Affärsekonomi och entreprenörskap</li>
+                        <li>Offentlig upphandling</li>  
+                      </ul>
+                    </div>
+                
+                    <div class="experience">
+                      <h3>Arbetslivserfarenhet</h3>
+                      <p>
+                        <span class="title">Gruppledare</span><br>
+                        <span class="company">Hornbach Göteborg</span>, <span class="time">2023</span><br>
+                        Styrning av varuflöde från och till godsmottagningen.<br>
+                        Ansvar för mailbox och struktur. Förmedla information till medarbetare om nya riktlinjer, arbetsätt och system. Inarbetning av nya medarbetare.<br>
+                        Upprätthållande av allmänna preventionsåtgärder och förhållningsregler.
+                      </p>
+                      <p>
+                        <span class="title">Godsmottagare</span><br>
+                        <span class="company">Hornbach Göteborg</span>, <span class="time">2021 - 2023</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              
+              </body>
+              </html>
+              
+                
+               

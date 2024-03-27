@@ -1,219 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This website is a personal portfolio for Wilma Niklasson, a frontend developer with a passion for creative web development. Explore Wilma's projects, experiences, and skills in HTML, CSS, and JavaScript. Discover her education and career journey, and share in her enthusiasm for learning and evolving within web development.">
-  <meta property="og:image" content="https://wilmaniklasson.se/img/url-bild.png">
-  <title>Wilma Niklasson - Frontend Developer</title>
-  <link rel="stylesheet" href="styles/intro.css">
-  <link rel="stylesheet" href="styles/om-mig.css">
-  <link rel="stylesheet" href="styles/projekt.css">
-  <link rel="stylesheet" href="styles/cv.css">
-  <link rel="stylesheet" href="styles/animations.css">
-  <script type="module" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<meta name="description" content="This website is a personal portfolio for Wilma Niklasson, a frontend developer with a passion for creative web development. Discover Wilma's projects, experiences, and skills in HTML, CSS, and JavaScript. Explore her education and career journey, and share her enthusiasm for learning and evolving in web development.">
+<meta property="og:image" content="/img/url-bild.png">
+    <link rel="stylesheet" href="styles/intro.css">
+    <link rel="stylesheet" href="styles/About.css">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/cv.css">
+    <script type="module" src="script.js"></script>
+    <title>Wilma Niklasson - Frontend Developer</title>
+    <link rel="icon" href="/img/avatar.svg" />
 </head>
 <body>
-
-   <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="navbar-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <nav class="navigation-buttons">
-            <a href="#om-mig">About Me</a>
-            <a href="#färdigheter">Projects</a>
-            <a href="#KarriärochUtbildning">Career and Education</a>
-            <a href="index.html">Swedish Version</a> <!-- Länk tillbaka till den svenska versionen -->
-        </nav>
-        <div class="logo">
-          <a href="https://github.com/wilmaniklasson" target="_blank" rel="noopener">
-          <img src="img/Github.svg" alt="github knapp" id="github">
-          </a>
-          <a href="https://www.linkedin.com/in/wilma-niklasson-5b3518192/" target="_blank" rel="noopener">
-          <img src="img/LinkedIn.svg" alt="LinkedIn knapp" id="linkedin">
-          </a>
-        </div>
-    </header> 
-
-    <!-- INTRO --> 
-    <section id="intro">
-      <div class="intro-bg">
-        <div class="intro-grid-container">
-        
-          <div class="presentation">
-            <div class="hälsning"> 
-              <h1 class="animate-me">Hi! My name is Wilma</h1>
+    <section class="intro">
+        <section class="container">
+            <aside class="navbar">
+                <div class="navbar-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <nav class="navigation-buttons">
+                  <a class="button" id="about" href="#aboutme">ABOUT ME</a>
+                  <a class="button" id="projects" href="#project">PROJECTS</a>
+                  <a class="button" id="cv" href="#CV">CV</a>
+                  <a class="button" id="english" href="index.html">SVENSKA</a>
+                </nav>
+                
+                
+            </aside> 
+            <div class="main-content">
+                <div class="text-content">
+                    <h1 class="greeting" id="animated-text">Hello! <br> my name is</h1>
+                    <h2 class="name" id="animate-me">Wilma</h2>
+                    
+                </div>
+                <div class="profile-pic">
+                    <img src="img/avatar.svg" alt="Wilma">
+                </div>
+                <div class="speech-bubble">
+                    <div class="social-link">
+                        <a href="https://github.com/wilmaniklasson" target="_blank" rel="noopener">
+                            <img src="img/Github.svg" alt="github button" id="github">
+                            </a>
+                            <a href="https://www.linkedin.com/in/wilma-niklasson-5b3518192/" target="_blank" rel="noopener">
+                            <img src="img/LinkedIn.svg" alt="LinkedIn button" id="linkedin">
+                            </a>
+                    </div>
+                </div>
             </div>
-            <div class="slogan"> 
-              <p>I am driven, solution-oriented, and a skilled facilitator who fosters collaboration and collective problem-solving within the team.</p>
-              <p></p>
+        </section>
+        <section class="description-section">
+            <p class="description">I am driven, solution-oriented, and a skilled facilitator who promotes collaboration and collective problem-solving in the team.</p>
+        </section>
+
+    </section>
+            <section id="aboutme" class='aboute-me'>
+                <h1>Who am I?</h1>
+                <p class='aboute-me-text'>I am a student in frontend development with a goal to make a career in programming. Currently, I am studying at Handelsakademin in Gothenburg, where I am learning all the necessary skills and tools to shape my future in web development. Programming is a newly found interest that suits me perfectly as there is always something new to learn. What I like most about programming is the creativity and the many different ways to solve a problem. I am driven by learning new things and evolving.</p>
+        </section>
+         
+
+    <section class='Projects' id="project">
+        <h2>Some of My Projects</h2>
+        <div class='project-container'>
+            <div class='project'>
+                <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/Notes/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Note.svg" alt="An image of the web app Notes" />
+                    </a>
+                </div>
+                <h3>Notes</h3>
+                <p>Create and delete notes. Switch between dark and light mode. Search notes with the search field. Notes are stored locally in the browser.</p>
+                <div class='button-container'>
+                    <a href="https://github.com/wilmaniklasson/Notes" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                    <a href="https://wilmaniklasson.github.io/Notes/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                </div>
             </div>
-          </div>
-    
-          <div class="målad-bild">
-            <img src="img/avatar.svg" alt="målad bild på Wilma">
-          </div>
+            <div class='project'>
+                <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Pokemon.svg" alt="An image of the web app Pokémon team manager" />
+                    </a>
+                </div>
+                <h3>Pokémon Team Manager</h3>
+                <p>Search for Pokémon from an external API. Add and remove Pokémon to your team and move to the reserve list.</p>
+                <div class='button-container'>
+                    <a href="https://github.com/wilmaniklasson/Poke_manager" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                    <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                </div>
+            </div>
+            <div class='project'>
+                <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Hangman.svg" alt="An image of the web app Hangman" />
+                    </a>
+                </div>
+                <h3>Hangman</h3>
+                <p>A group project that combines JavaScript, HTML, and CSS. A classic game of Hangman that saves the player's results locally.</p>
+                <div class='button-container'>
+                    <a href="https://github.com/wilmaniklasson/Hangman" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                    <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                </div>
+            </div>
+            <div class='project'>
+                <div class='project-image'>
+                    <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener noreferrer">
+                        <img src="img/Bättrewebb.svg" alt="An image of the web app Better Web" />
+                    </a>
+                </div>
+                <h3>Bättre webb</h3>
+                <p>A website for the 'Bettre webb' conference, developed with HTML and CSS as part of the first course in my education.</p>
+                <div class='button-container'>
+                    <a href="https://github.com/wilmaniklasson/CreativeCodeNest" target="_blank" rel="noopener noreferrer" class='show-more'>Repo</a>
+                    <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener noreferrer" class='show-more'>Demo</a>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     
-    <!-- ABOUT ME -->
-    <section id="om-mig">
-      <div class="om-mig-bg">
-        <div class="om-mig-grid-container">
-          <div class="om-mig-text">
-            <h2>About Me</h2> 
-            <p>I am a student in frontend development with the goal of pursuing a career in programming. Currently, I am studying at Handelsakademin in Gothenburg, where I am acquiring all the necessary skills and tools to shape my future in web development. Programming is a newfound interest that suits me perfectly because there are always new things to learn. What I appreciate most about programming is the creativity it entails and the fact that there are numerous ways to solve a problem. I am driven to learn new things and to evolve.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+                </section>
+                <section class="cv-section" id="CV">
+                  <div class="cv-container">
+                      <div class="cv-content">
+                          <div class="profile-picture">
+                              <img src="img/profilbild1.png" alt="Profile Picture">
+                          </div>
+                          
+                          <div class="education">
+                          <h3>Education</h3>
+                          <p>
+                            <span class="title">Frontend Developer</span><br>
+                            <span class="institute">NBI / Handelsakademin</span>, <span class="time">2023 - present</span>
+                          </p>
+                        </div>
+                    
+                        <div class="programming-courses">
+                          <h3>Courses</h3>
+                          <ul class="course-list">
+                            <li><span class="completed">&#10004;</span> HTML/CSS</li>
+                            <li><span class="completed">&#10004;</span> JavaScript</li>
+                            <li><span class="completed">&#10004;</span> Graphic Tools</li>
+                            <li><span class="completed">&#10004;</span>UX and Usability</li>
+                            <li><span class="completed">&#10004;</span>Agile Methods</li>
+                            <li>Advanced JavaScript</li>
+                            <li>Testing</li>
+                            <li>Fullstack Development</li>
+                            <li>LIA 1 and LIA 2</                        <li>Final Project</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="skills">
+                      <h3>Skills</h3>
+                      <div class="skill-images">
+                        <div class="image">
+                            <img src="img/html.svg" alt="HTML Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                        <div class="image">
+                            <img src="img/css.svg" alt="CSS Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                        <div class="image">
+                            <img src="img/js.svg" alt="JavaScript Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                        <div class="image">
+                            <img src="img/git.svg" alt="Git Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                        <div class="image">
+                            <img src="img/Github2.svg" alt="GitHub Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                        <div class="image">
+                            <img src="img/Figma.svg" alt="Figma Icon" style="max-width: 50px; max-height: 50px;">
+                        </div>
+                    </div>
+                    </div>
+                    
+                  
+                    <div class="cv-content">
+                      <div class="education">
+                        <h3>Education</h3>
+                        <p>
+                          <span class="title">B2B Sales (Account Manager)</span><br>
+                          <span class="institute">Stockholm School of Business</span>, <span class="time">2019 - 2021</span>
+                        </p>
+                      </div>
+                  
+                      <div class="courses">
+                        <h3>Some of the courses I took:</h3>
+                        <ul>
+                          <li>Business English</li>
+                          <li>Business Communication</li>
+                          <li>Customer Relationship Management</li>
+                          <li>Selling in Digital Channels</li>
+                          <li>Complex and Consultative Selling</li>
+                          <li>Business Economics and Entrepreneurship</li>
+                          <li>Public Procurement</li>  
+                        </ul>
+                      </div>
+                  
+                      <div class="experience">
+                        <h3>Work Experience</h3>
+                        <p>
+                          <span class="title">Team Leader</span><br>
+                          <span class="company">Hornbach Gothenburg</span>, <span class="time">2023</span><br>
+                          Management of goods flow from and to the goods reception.<br>
+                          Responsibility for mailbox and structure. Communicating information to employees about new guidelines, working methods, and systems. Training of new employees.<br>
+                          Maintenance of general prevention measures and regulations.
+                        </p>
+                        <p>
+                          <span class="title">Goods Receiver</span><br>
+                          <span class="company">Hornbach Gothenburg</span>, <span class="time">2021 - 2023</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                
+                </body>
+                </html>
+  
     
-    <!-- PROJECTS -->
-    
-    <section id="projekt">
-      <div class="projekt-bg">
-        <div class="projekt-content">
-          <div class="projekt-grid-container">
-            <div class="projekt-container">
-              <div class="projekt">
-                <div> 
-                  <a href="https://wilmaniklasson.github.io/Poke_manager/" target="_blank" rel="noopener">
-                    <img src="img/projekt3.png" alt="Pokémon team manager" class="projekt-image3">
-                  </a>
-                </div>
-                <div>
-                  <h3>Pokémon team manager</h3>
-                  <p>Search for Pokémon retrieved from an API and assemble a team by adding or removing Pokémon.</p>
-                </div>
-              </div>
-              <div class="projekt">
-                <div>
-                  <a href="https://wilmaniklasson.github.io/Hangman/" target="_blank" rel="noopener">
-                    <img src="img/projekt2.png" alt="Hangman" class="projekt-image2">
-                  </a>
-                </div>
-                <div>
-                  <h3>Hangman</h3>
-                  <p>A team project incorporating JavaScript, HTML, and CSS: a classic hangman game that saves the player's results locally.</p>
-                </div>
-              </div>
-              <div class="projekt">
-                <div>
-                  <a href="https://wilmaniklasson.github.io/CreativeCodeNest/" target="_blank" rel="noopener">
-                    <img src="img/projekt1.png" alt="Better Web" class="projekt-image1">
-                  </a>
-                </div>
-                <div>
-                  <h3>Bättre Webb</h3>
-                  <p>
-                    A website for the Bättre Webb conference created using HTML and CSS. It displays seminar details and handles registrations.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CAREER AND EDUCATION -->
-<section class="cv-avsnitt" id="KarriärochUtbildning">
-  <div class="cv-behållare">
-    <div class="cv-innehåll">
-      <div class="profilbild">
-        <img src="img/profilbild1.png" alt="Profilbild">
-      </div>
-      
-      <div class="utbildning">
-        <h3>Education</h3>
-        <p>
-          <span class="titel">Frontend Developer</span><br>
-          <span class="institut">NBI / Handelsakademin</span>, <span class="tid">2023 - ongoing</span>
-        </p>
-      </div>
-  
-      <div class="kurser-programmering">
-        <h3>Courses</h3>
-        <ul class="kurslista">
-          <li><span class="avklarad">&#10004;</span> HTML/CSS</li>
-          <li><span class="avklarad">&#10004;</span> JavaScript</li>
-          <li><span class="avklarad">&#10004;</span> Graphic Tools</li>
-          <li><span class="avklarad">&#10004;</span>UX and Usability</li>
-          <li><span class="avklarad">&#10004;</span> Agile Methods</li>
-          <li>JavaScript Advanced</li>
-          <li>Testing</li>
-          <li>Full Stack Development</li>
-          <li>Internship 1 and Internship 2</li>
-          <li>Thesis Project</li>
-        </ul>
-      </div>
-    </div>
-    <div class="kompetenser">
-      <h3>Skills</h3>
-      <div class="färdighetsbilder">
-        <div class="bild">
-          <img src="img/html.svg" alt="HTML Icon">
-        </div>
-        <div class="bild">
-          <img src="img/css.svg" alt="CSS Icon">
-        </div>
-        <div class="bild">
-          <img src="img/js.svg" alt="JavaScript Icon">
-        </div>
-        <div class="bild">
-          <img src="img/git.svg" alt="Git Icon">
-        </div>
-        <div class="bild">
-          <img src="img/Github2.svg" alt="GitHub Icon">
-        </div>
-        <div class="bild">
-          <img src="img/Figma.svg" alt="Figma Icon">
-        </div>
-      </div>
-    </div>
-  
-    <div class="cv-innehåll">
-      <div class="utbildning">
-        <h3>Education</h3>
-        <p>
-          <span class="titel">B2B Sales (Account Manager)</span><br>
-          <span class="institut">Stockholm School of Business</span>, <span class="tid">2019 - 2021</span>
-        </p>
-      </div>
-  
-      <div class="kurser">
-        <h3>Some of the courses I took:</h3>
-        <ul>
-          <li>Business English</li>
-          <li>Business Communication</li>
-          <li>Customer Relationship Management</li>
-          <li>Sales in Digital Channels</li>
-          <li>Complex and Consultative Selling</li>
-          <li>Business Economics and Entrepreneurship</li>
-          <li>Public Procurement</li>  
-        </ul>
-      </div>
-  
-      <div class="erfarenhet">
-        <h3>Work Experience</h3>
-        <p>
-          <span class="titel">Team Leader</span><br>
-          <span class="företag">Hornbach Gothenburg</span>, <span class="tid">2023</span><br>
-          Managing the flow of goods to and from the goods reception.<br>
-          Being responsible for the mailbox and structure, including communication of information to employees regarding new guidelines, working methods, and systems, as well as training new employees.<br>
-          Maintaining general preventive measures and rules of conduct.</p>
-        <p>
-          <span class="titel">Goods Receiver</span><br>
-          <span class="företag">Hornbach Gothenburg</span>, <span class="tid">2021 - 2023</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-</body>
-</html>

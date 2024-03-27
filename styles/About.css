@@ -1,0 +1,28 @@
+.aboute-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    background-color: #5DBE8C;
+    padding: 2rem;
+}
+
+.aboute-me-text  {
+    max-width: 700px;
+    line-height: 1.4;
+    color: black;
+}
+
+
+@media screen and (max-width: 450px) {
+    .aboute-me-text{
+        width: 100%;
+    }
+
+    .aboute-me{
+        padding: 1rem;
+    }
+   
+}

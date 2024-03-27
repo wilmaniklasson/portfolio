@@ -1,5 +1,10 @@
-.cv-avsnitt {
-  background-color: #ffe6e4;
+.cv-section, .cv-section * {
+  font-family: Arial, sans-serif;
+}
+
+.cv-section {
+  background-color: #ffffff;
+  color: #333;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -7,7 +12,7 @@
   height: auto;
 }
 
-.cv-innehåll {
+.cv-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,69 +20,70 @@
   margin-bottom: 20px;
 }
 
-.erfarenhet {
+.experience {
   max-width: 20rem;
   margin-bottom: 20px;
 }
 
-.erfarenhet h3 {
+.experience h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #555;
+  color: black; 
 }
 
-.erfarenhet p {
+.experience p {
   font-size: 16px;
-  color: #666;
+  color: #333; 
   line-height: 1.5;
 }
 
-.erfarenhet .titel {
+.experience .title {
   font-weight: bold;
 }
 
-.erfarenhet .företag {
+.experience .company {
   font-style: italic;
 }
 
-.erfarenhet .tid {
-  color: #999;
+.experience .time {
+  color: #555;
+  font-weight: 700;
 }
 
-.kurser {
+.courses {
   margin-bottom: 20px;
 }
 
-.kurser h3 {
+.courses h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #555;
+  color: black; 
 }
 
-.kurser ul {
+.courses ul {
   list-style-type: none;
   padding: 0;
 }
 
-.kurser ul li {
+.courses ul li {
   font-size: 16px;
-  color: #666;
+  color: #333; 
   margin-bottom: 5px;
 }
 
-.kurser ul li:before {
+.courses ul li:before {
   font-weight: bold;
   display: inline-block;
   width: 1em;
   margin-left: -1em; 
 }
 
-.kurser-programmering ul {
+.programming-courses ul {
   list-style-type: none; 
   padding: 0; 
 }
 
-.avklarad {
+.completed {
   color: #4CAF50;
   font-weight: bold;
   display: inline-block;
@@ -86,67 +92,71 @@
   margin-right: 0.5em; 
 }
 
-.kompetenser h3 {
+.skills h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #555;
+  color: black; 
   text-align: center;
 }
 
-.profilbild {
+.profile-picture {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.profilbild img {
+.profile-picture img {
   width: 20%;
   height: auto;
   border-radius: 50%;
 }
 
-.profilbild img:hover {
+.profile-picture img:hover {
   transform: rotate(360deg);
 }
 
-.cv-innehåll {
+.cv-content {
   margin-bottom: 20px;
 }
 
-.utbildning h3 {
+.education h3 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #555;
+  color: black; 
 }
 
-.utbildning p {
+.education p {
   font-size: 16px;
-  color: #666;
+  color: #333; 
   line-height: 1.5;
 }
 
-.utbildning .titel {
+.education .title {
   font-weight: bold;
 }
 
-.utbildning .institution {
+.education .institution {
   font-style: italic;
 }
 
-.utbildning .tid {
-  color: #999;
+.education .time {
+  color: #555;
+  font-weight: 700;
+}
+
+.skill-images img {
+  margin: 5px;
 }
 
 @media screen and (max-width: 768px) {
-  .profilbild img {
+  .profile-picture img {
     width: 40%;
   }
-  .färdighetsbilder img {
+  .skill-images img {
     width: 80%;
   }
-  
 }
 
-.färdighetsbilder {
+.skill-images {
   display: flex;
   justify-content: center;
 }
