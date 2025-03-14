@@ -1,7 +1,11 @@
 .cv-section, .cv-section * {
   font-family: Arial, sans-serif;
 }
-
+.cv-text {
+  padding: 20px;
+  margin: 20px;
+  height: auto;
+}
 .cv-section {
   background-color: #ffffff;
   color: #333;
