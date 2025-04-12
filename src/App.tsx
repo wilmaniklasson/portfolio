@@ -4,6 +4,7 @@ import Introduction from './components/Introduction';
 import CarouselComponent from './components/CarouselComponent';
 import About from './components/About';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 const App: React.FC = () => {
@@ -18,8 +19,7 @@ const App: React.FC = () => {
         <section id="Project">
         <CarouselComponent />
         </section>
-     
-        
+        <Footer />
     </div>
   );
 }
