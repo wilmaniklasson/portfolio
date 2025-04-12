@@ -12,8 +12,14 @@ const App: React.FC = () => {
     <div className="App">
       <Navbar />
         <Introduction />
+        <section id="About">
         <About />
+        </section>
+        <section id="Project">
         <CarouselComponent />
+        </section>
+     
+        
     </div>
   );
 }
