@@ -1,5 +1,4 @@
 import '../styles/About.css';
-
 import html from '../assets/html.svg';
 import css from '../assets/css.svg';
 import js from '../assets/js.svg';

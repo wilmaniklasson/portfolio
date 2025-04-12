@@ -1,11 +1,9 @@
-
-import { Carousel } from 'primereact/carousel'; // Import the carousel from PrimeReact
-import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Import your theme
-import 'primereact/resources/primereact.min.css';  // Core PrimeReact styles
-import 'primeicons/primeicons.css';  // Optional: Icons used by PrimeReact
-
-import './CarouselComponent.css';  // Import custom CSS for the component
-import ProjectList from './ProjectList';  // Import ProjectList from the other file
+import { Carousel } from 'primereact/carousel'; 
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import 'primereact/resources/primereact.min.css'; 
+import 'primeicons/primeicons.css';
+import './CarouselComponent.css';
+import ProjectList from './ProjectList';
 import '../styles/project.css'
 
 const CarouselComponent = () => {
@@ -39,7 +37,7 @@ const CarouselComponent = () => {
             <div className="card">
                 <h5>Project Carousel</h5>
                 <Carousel 
-                    value={ProjectList()}  // Call ProjectList to get the array
+                    value={ProjectList()}
                     numVisible={1} 
                     numScroll={1} 
                     orientation="horizontal"
