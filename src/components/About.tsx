@@ -42,7 +42,7 @@ const About = () => {
                 </p>
             </section>
             <div className="skills">
-                <h3>Kompetenser</h3>
+                <h3> {t('Skills')}</h3>
                 <div className="skill-list">
                     {skills.map((skill, index) => (
                         <div className="skill-item" key={index}>

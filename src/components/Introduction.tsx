@@ -16,6 +16,7 @@ const Introduction = () => {
                 <h1 className="greeting" id='animated-text'>{t('nameIs')}</h1>
                     <h2 className="name" id='animate-me'>Wilma</h2>
                 </div>
+            <div className='image-content'>
             <div className="profile-pic">
                 <img src={Avatar} alt="Wilma" />
             </div>
@@ -29,6 +30,9 @@ const Introduction = () => {
                 </a>
             </div>
             </div>
+
+            </div>
+            
                 </section>
                 <section className="description-section">
                     <p className="description">{t('pitch')}</p> 
