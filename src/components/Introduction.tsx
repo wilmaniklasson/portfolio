@@ -3,21 +3,14 @@ import Avatar from '../assets/images/avatar.svg';
 import githubImg from '../assets/images/github.svg';
 import linkedinImg from '../assets/images/linkedin.svg';
 import '../styles/Introduction.css';
-import Navbar from './Navbar';
-import { useState } from 'react';
 const Introduction = () => {
     const { t } = useTranslation();
-    const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
+ 
     return (
         <>
         <div className="introduction" id="Introduction">
         
             <section className="row-section">
-            <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
                <div className="text-content">
                 <h1 className="greeting" id='animated-text'>{t('hello')}</h1> 
                 <h1 className="greeting" id='animated-text'>{t('nameIs')}</h1>

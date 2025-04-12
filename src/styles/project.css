@@ -1,0 +1,135 @@
+.Projects {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; 
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    padding: 2rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px; 
+    box-shadow: inset -3px -3px 0px #0000004c;
+    background-color: #f2f2f2;
+    padding: 20px;
+    color: black;
+    max-width: 300px;
+    width: 90%;
+    height: auto; 
+}
+
+
+
+.project-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    transition: transform 0.3s ease; 
+}
+
+.project-image:hover {
+    transform: scale(1.05);
+}
+
+.project-image img {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    gap: 5rem;
+}
+
+
+
+
+
+.show-more {
+    background-color: #5DBE8C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: inset -3px -3px 0px #0000004c;
+    transition: transform 0.3s ease; 
+}
+
+.show-more:hover {
+    background-color: #4CA97B;
+    transform: scale(1.05); 
+}
+
+.show-more:active {
+    background-color: #3F835E;
+    box-shadow: inset -2px -2px 0px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.button-container a {
+    text-decoration: none;
+}
+
+
+
+
+/* Mediafråga för att ändra layouten när skärmen blir mindre */
+@media (max-width: 768px) {
+    .project-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .Projects {
+        padding: 2rem; 
+    }
+    
+}
+
+@media (max-width: 500px) {
+    
+    .Projects {
+        padding: 0.5rem; 
+    }
+
+    .Projects h2{
+        font-size: 1.3rem; 
+    }
+    
+}
+
+@media (max-width: 400px) {
+    
+    .Projects {
+        padding: 0rem; 
+    }
+    .project-container {
+        padding: 0rem; 
+    }
+
+    .Projects h2{
+        font-size: 1rem; 
+    }
+    
+}
+
+

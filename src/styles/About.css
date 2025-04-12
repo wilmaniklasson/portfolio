@@ -1,0 +1,87 @@
+.aboute-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    background-color: #5DBE8C;
+    padding: 2rem;
+}
+
+.aboute-me-text{
+    width: 80%;
+    max-width: 700px;
+    line-height: 1.4;
+    color: black;
+}
+
+
+.skills h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white; 
+    text-align: center;
+  }
+
+  
+  .skill-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    height: 50px;
+  }
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+  }
+  
+  .skills .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start; 
+    justify-content: center;
+    color: black;
+  }
+  
+  .skills .skill-item {
+    text-align: center;
+  }
+  
+  .skills .skill-item img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .skills .skill-item p {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .skills {
+    background-color: white;
+    padding: 0.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    .skill-images {
+      height: 40px;
+    
+    }
+  }
+  
+  
+@media screen and (max-width: 600px) {
+    .aboute-me-text{
+        width: 100%;
+    }
+
+    .aboute-me{
+        padding: 1rem;
+    }
+   
+}

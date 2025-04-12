@@ -22,11 +22,15 @@ const Navbar = () => {
         <span className={`bar ${isMenuOpen ? 'rotate-backward' : ''}`}></span>
       </div>
       <nav className={`navigation-buttons ${isMenuOpen ? 'open' : ''}`}>
-        <ScrollLink className="button" id="about" to="About" smooth={true} duration={500}>
-          {t('aboutMe')}
+        <ScrollLink to="About" smooth={true} duration={500}>
+          <button className="button" id="about">
+            {t('aboutMe')}
+          </button>
         </ScrollLink>
-        <ScrollLink className="button" id="projects" to="Project" smooth={true} duration={500}>
-          {t('projects')}
+        <ScrollLink to="Project" smooth={true} duration={500}>
+          <button className="button" id="projects">
+            {t('projects')}
+          </button>
         </ScrollLink>
         <LanguageSwitcher />
       </nav>
