@@ -88,9 +88,9 @@
 }
 
 .profile-pic {
-    width: 220px;
-    height: 220px;
-    background-size: cover;
+    width: 300px;
+    height: auto;
+   
 }
 
 .profile-pic img {
@@ -216,6 +216,16 @@
 }
 
 @media screen and (max-width: 768px) {
+    .speech-bubble {
+        width: 90px;
+        max-height: 50px;
+     
+    }
+    .social-link img {
+        width: 30px;
+        height: 30px;
+    }
+    
     .navigation-buttons {
         display: none;
         flex-direction: column;
@@ -335,6 +345,8 @@
 
     .profile-pic {
         margin-left: 1rem;
+        width: 250px;
+         
     }
 
     .text-content {

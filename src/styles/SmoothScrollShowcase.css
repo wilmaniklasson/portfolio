@@ -1,0 +1,33 @@
+.scroll-showcase-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: #f9f9f9;
+  }
+  
+  .scroll-showcase-track {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 30s linear infinite;
+  }
+  
+  .scroll-showcase-item {
+    flex: 0 0 auto;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-showcase-item:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  

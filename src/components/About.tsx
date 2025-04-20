@@ -13,6 +13,7 @@ import jest from '../assets/jest.svg';
 import cypress from '../assets/cypress.svg';
 import azuredevops from '../assets/azure-devops.svg';
 import { useTranslation } from 'react-i18next';
+import InfiniteScrollSection from './ScrollingSection';
 
 const skills = [
   { src: html, alt: 'HTML Icon', name: 'HTML' },
@@ -41,17 +42,17 @@ const About = () => {
                     {t('hoAmIText')}
                 </p>
             </section>
-            <div className="skills">
-                <h3> {t('Skills')}</h3>
-                <div className="skill-list">
-                    {skills.map((skill, index) => (
-                        <div className="skill-item" key={index}>
-                            <img src={skill.src} alt={skill.alt} className="skill-images" />
-                            <p>{skill.name}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <div className="scrolling-section">
+      <InfiniteScrollSection 
+        items={skills.map(skill => (
+          <div className="skill-item" key={skill.name}>
+            <img src={skill.src} alt={skill.alt} className="skill-images" />
+          </div>
+        ))} 
+      />
+    </div>
+            
+          
         </>
     );
 };
