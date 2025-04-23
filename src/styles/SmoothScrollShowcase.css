@@ -12,14 +12,12 @@
   
   .scroll-showcase-item {
     flex: 0 0 auto;
+    justify-content: center;
     padding: 1rem 2rem;
     font-size: 2rem;
     transition: transform 0.3s ease;
   }
   
-  .scroll-showcase-item:hover {
-    transform: scale(1.1);
-  }
   
   @keyframes scrollLeft {
     from {

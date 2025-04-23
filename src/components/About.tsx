@@ -12,6 +12,8 @@ import mongodb from '../assets/mongodb.svg';
 import jest from '../assets/jest.svg';
 import cypress from '../assets/cypress.svg';
 import azuredevops from '../assets/azure-devops.svg';
+import vitejs from '../assets/vite.js.svg';
+import nodejs from '../assets/node-js.svg';
 import { useTranslation } from 'react-i18next';
 import InfiniteScrollSection from './ScrollingSection';
 
@@ -28,7 +30,9 @@ const skills = [
   { src: mongodb, alt: 'MongoDB Icon', name: 'MongoDB' },
   { src: jest, alt: 'Jest Icon', name: 'Jest' },
   { src: cypress, alt: 'Cypress Icon', name: 'Cypress' },
-  { src: azuredevops, alt: 'Azure DevOps Icon', name: 'Azure DevOps' }
+  { src: azuredevops, alt: 'Azure DevOps Icon', name: 'Azure DevOps' },
+  { src: vitejs, alt: 'Vite.js Icon', name: 'Vite.js' },
+  { src: nodejs, alt: 'Node.js Icon', name: 'Node.js' }
 ];
 
 const About = () => {
@@ -47,6 +51,7 @@ const About = () => {
         items={skills.map(skill => (
           <div className="skill-item" key={skill.name}>
             <img src={skill.src} alt={skill.alt} className="skill-images" />
+            <p className="skill-name"> {skill.name} </p>
           </div>
         ))} 
       />

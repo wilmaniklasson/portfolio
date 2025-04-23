@@ -17,14 +17,16 @@
 }
 
 
-.skills h3 {
-    font-size: 20px;
-    margin: 10px;
+.skill-name {
+    font-size: 0.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
     color: black;
-    text-align: center;
-  }
+    text-align: center; 
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    }
 
-  
   .skill-images {
     display: flex;
     justify-content: center;
@@ -49,8 +51,11 @@
     color: black;
   }
   
-  .skills .skill-item {
+.skill-item {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
   }
   
   .skills .skill-item img {
@@ -58,15 +63,13 @@
     margin: 0 auto;
   }
   
-  .skills .skill-item p {
-    margin-top: 5px;
-    font-size: 14px;
-  }
 
   .skills {
     background-color: white;
     padding: 0.5rem;
   }
+
+
   @media screen and (max-width: 768px) {
     .skill-images {
       height: 40px;
