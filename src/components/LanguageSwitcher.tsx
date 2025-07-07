@@ -1,8 +1,13 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import '../styles/Introduction.css';
 
-const LanguageSwitcher: React.FC = () => {
+type LanguageSwitcherProps = {
+  isMenuOpen: boolean;
+  toggleMenu: () => void;
+};
+
+const LanguageSwitcher = ({ isMenuOpen, toggleMenu }: LanguageSwitcherProps) => {
   const { i18n } = useTranslation();
 
 
@@ -10,6 +15,10 @@ const LanguageSwitcher: React.FC = () => {
     const currentLang = i18n.language; 
     const newLang = currentLang === 'en' ? 'sv' : 'en'; 
     i18n.changeLanguage(newLang);
+    if (isMenuOpen) {
+      toggleMenu();
+    }
+    localStorage.setItem('language', newLang); 
   };
 
   return (

@@ -4,11 +4,13 @@ import { Link as ScrollLink } from 'react-scroll';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-
+import "../styles/ThemeToggle.css"
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const theme = localStorage.getItem('theme') || 'dark';
+
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -21,18 +23,19 @@ const Navbar = () => {
         <span className={`bar ${isMenuOpen ? 'fade-out' : ''}`}></span>
         <span className={`bar ${isMenuOpen ? 'rotate-backward' : ''}`}></span>
       </div>
-      <nav className={`navigation-buttons ${isMenuOpen ? 'open' : ''}`}>
+      <nav
+  className={`navigation-buttons ${isMenuOpen ? 'open' : ''} ${isMenuOpen && theme === 'light' ? 'light' : ''}`}>
         <ScrollLink to="About" smooth={true} duration={500}>
-          <button className="button" id="about">
+          <button className="button" id="about" onClick={toggleMenu}>
             {t('aboutMe')}
           </button>
         </ScrollLink>
         <ScrollLink to="Project" smooth={true} duration={500}>
-          <button className="button" id="projects">
+          <button className="button" id="projects" onClick={toggleMenu}>
             {t('projects')}
           </button>
         </ScrollLink>
-        <LanguageSwitcher />
+        <LanguageSwitcher isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       </nav>
     </div>
   );
