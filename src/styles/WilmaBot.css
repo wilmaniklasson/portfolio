@@ -1,0 +1,154 @@
+.wilma-bot {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.wilma-bot__title {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.wilma-bot__chatbox {
+  position: relative;
+  
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.wilma-bot__avatar {
+  width: 60px;
+  height: 60px;
+  
+}
+
+
+.wilma-bot__message {
+  position: relative;
+  padding: 0.75rem 1rem;
+  max-width: 75%;
+  border-radius: 12px;
+  font-size: 0.5rem;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.wilma-bot__message--bot {
+  background-color: #d0ebdf;
+  align-self: flex-start;
+  color: #000;
+}
+.wilma-bot__message--bot::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  left: 20px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #d0ebdf transparent transparent transparent;
+}
+
+.wilma-bot__message--user {
+  background-color: #bee3db;
+  align-self: flex-end;
+  color: #000;
+}
+.wilma-bot__message--user::after {
+  content: '';
+  position: absolute;
+  bottom: -12px;
+  right: 20px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #bee3db transparent transparent transparent;
+}
+
+
+.wilma-bot__text {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+
+
+
+.wilma-bot__input-area {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.wilma-bot__input {
+  flex: 1;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+
+}
+
+.wilma-bot__button {
+  padding: 0.6rem 1rem;
+  background-color: #6fbf73;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wilma-bot__button:hover {
+  background-color: #5da163;
+}
+
+
+@media (max-width: 480px) {
+  .wilma-bot {
+    padding: 0.3rem;
+    margin: 0.3rem;
+  }
+
+  .wilma-bot__title {
+    font-size: 1.25rem;
+  }
+
+  .wilma-bot__chatbox {
+   
+    padding: 0.75rem;
+  }
+
+  .wilma-bot__input {
+    font-size: 0.9rem;
+  }
+
+  .wilma-bot__button {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .wilma-bot__avatar {
+    width: 32px;
+    height: 32px;
+    bottom: 8px;
+    left: 8px;
+  }
+}

@@ -14,6 +14,7 @@ const App: React.FC = () => {
     <div className="App">
       <Navbar />
         <ThemeToggle />
+        
         <Introduction />
         <section id="About">
         <About />

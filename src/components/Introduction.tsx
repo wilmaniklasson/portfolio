@@ -3,6 +3,7 @@ import Avatar from '../assets/images/avatar.svg';
 import githubImg from '../assets/images/github.svg';
 import linkedinImg from '../assets/images/linkedin.svg';
 import '../styles/Introduction.css';
+import ScrollToFooterButton from './ScrollToFooterButton';
 const Introduction = () => {
     const { t } = useTranslation();
  
@@ -11,10 +12,9 @@ const Introduction = () => {
         <div className="introduction" id="Introduction">
         
             <section className="row-section">
-               <div className="text-content">
-                <h1 className="greeting" id='animated-text'>{t('hello')}</h1> 
-                <h1 className="greeting" id='animated-text'>{t('nameIs')}</h1>
-                    <h2 className="name" id='animate-me'>Wilma</h2>
+            <div className="greeting-container">
+              
+                    <ScrollToFooterButton />
                 </div>
             <div className='image-content'>
             <div className="profile-pic">

@@ -9,7 +9,10 @@
     text-align: center;
 }
 
-
+.greeting-container {
+    display: flex;
+    flex-direction: row;
+}
 
 .navbar {
     display: flex;
@@ -114,7 +117,7 @@
 .speech-bubble::after {
     content: '';
     position: absolute;
-    bottom: -20px;
+    bottom: -19px;
     left: 30%;
     transform: translateX(-50%);
     border-width: 10px;

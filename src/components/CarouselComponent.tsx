@@ -35,7 +35,6 @@ const CarouselComponent = () => {
     return (
         <div className="carousel-container">
             <div className="card">
-                <h5>Project Carousel</h5>
                 <Carousel 
                     value={ProjectList()}
                     numVisible={1} 

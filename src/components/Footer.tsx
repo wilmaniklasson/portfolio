@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Footer.css";
 import cv from "../assets/Wilma_Niklasson_CV.pdf"
 import { useTranslation } from "react-i18next";
+import { WilmaBot } from "./WilmaBot";
 
 
 const Footer: React.FC = () => {
@@ -15,6 +16,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="footer">
+      <WilmaBot />
       <button onClick={handleOpenCV} className="footer-button">
         {t('openCV')}
       </button>

@@ -36,6 +36,7 @@ const Navbar = () => {
           </button>
         </ScrollLink>
         <LanguageSwitcher isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+       
       </nav>
     </div>
   );
