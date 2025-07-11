@@ -21,7 +21,6 @@
 
 .wilma-bot__chatbox {
   position: relative;
-  
   overflow-y: auto;
   padding: 1rem;
   display: flex;
@@ -151,4 +150,10 @@
     bottom: 8px;
     left: 8px;
   }
+
+  .wilma-bot__text {
+  font-size: 13px;
+  
+}
+
 }
