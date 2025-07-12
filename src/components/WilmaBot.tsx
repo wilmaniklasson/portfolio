@@ -28,13 +28,20 @@ export const WilmaBot = () => {
 
     const baseUrl = import.meta.env.VITE_API_URL;
 
-    try {
-      const res = await fetch(`${baseUrl}/api/chat`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      });
+   try {
+    const res = await fetch(`${baseUrl}/api/chat`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: input }),
+    });
 
+    if (res.status === 429) {
+      // Hantera rate limit-fel: visa översatt meddelande
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: t("tooManyRequests") },
+      ]);
+    } else {
       const data = await res.json();
 
       if (!res.ok) {
@@ -43,22 +50,19 @@ export const WilmaBot = () => {
           { sender: "bot", text: data.reply || t("somethingWentWrong") },
         ]);
       } else {
-        const botMessage: Message = {
-          sender: "bot",
-          text: data.reply,
-        };
-        setMessages((prev) => [...prev, botMessage]);
+        setMessages((prev) => [...prev, { sender: "bot", text: data.reply }]);
       }
-      setInput("");
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { sender: "bot", text: t("somethingWentWrong") },
-      ]);
-    } finally {
-      setLoading(false);
     }
-  };
+    setInput("");
+  } catch {
+    setMessages((prev) => [
+      ...prev,
+      { sender: "bot", text: t("somethingWentWrong") },
+    ]);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="wilma-bot">
