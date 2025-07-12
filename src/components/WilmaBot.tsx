@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../styles/WilmaBot.css";
 import { useTranslation } from "react-i18next";
 import VsgLogo from "../assets/VsgLogo.svg";
@@ -14,6 +14,14 @@ export const WilmaBot = () => {
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
 
+  const lastMessageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (lastMessageRef.current) {
+      lastMessageRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [messages]);
+
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
 
@@ -28,41 +36,41 @@ export const WilmaBot = () => {
 
     const baseUrl = import.meta.env.VITE_API_URL;
 
-   try {
-    const res = await fetch(`${baseUrl}/api/chat`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input }),
-    });
+    try {
+      const res = await fetch(`${baseUrl}/api/chat`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: input }),
+      });
 
-    if (res.status === 429) {
-      // Hantera rate limit-fel: visa översatt meddelande
-      setMessages((prev) => [
-        ...prev,
-        { sender: "bot", text: t("tooManyRequests") },
-      ]);
-    } else {
-      const data = await res.json();
-
-      if (!res.ok) {
+      if (res.status === 429) {
         setMessages((prev) => [
           ...prev,
-          { sender: "bot", text: data.reply || t("somethingWentWrong") },
+          { sender: "bot", text: t("tooManyRequests") },
         ]);
       } else {
-        setMessages((prev) => [...prev, { sender: "bot", text: data.reply }]);
+        const data = await res.json();
+
+        if (!res.ok) {
+          setMessages((prev) => [
+            ...prev,
+            { sender: "bot", text: data.reply || t("somethingWentWrong") },
+          ]);
+        } else {
+          setMessages((prev) => [...prev, { sender: "bot", text: data.reply }]);
+        }
       }
+
+      setInput("");
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        { sender: "bot", text: t("somethingWentWrong") },
+      ]);
+    } finally {
+      setLoading(false);
     }
-    setInput("");
-  } catch {
-    setMessages((prev) => [
-      ...prev,
-      { sender: "bot", text: t("somethingWentWrong") },
-    ]);
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <div className="wilma-bot">
@@ -72,6 +80,7 @@ export const WilmaBot = () => {
         {messages.map((msg, i) => (
           <div
             key={i}
+            ref={i === messages.length - 1 ? lastMessageRef : null}
             className={`wilma-bot__message wilma-bot__message--${msg.sender}`}
           >
             <div className="wilma-bot__text">{msg.text}</div>
@@ -79,8 +88,13 @@ export const WilmaBot = () => {
         ))}
 
         {loading && (
-          <div className="wilma-bot__message wilma-bot__message--bot">
-            <div className="wilma-bot__text">{t("sendingMessage") || "Skickar fråga..."}</div>
+          <div
+            className="wilma-bot__message wilma-bot__message--bot"
+            ref={lastMessageRef}
+          >
+            <div className="wilma-bot__text">
+              {t("sendingMessage") || "Skickar fråga..."}
+            </div>
           </div>
         )}
       </div>
