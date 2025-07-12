@@ -11,10 +11,13 @@ type Message = {
 export const WilmaBot = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
+  const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
 
   const sendMessage = async () => {
-    if (!input.trim()) return;
+    if (!input.trim() || loading) return;
+
+    setLoading(true);
 
     const userMessage: Message = {
       sender: "user",
@@ -23,37 +26,37 @@ export const WilmaBot = () => {
 
     setMessages((prev) => [...prev, userMessage]);
 
+    const baseUrl = import.meta.env.VITE_API_URL;
+
     try {
-      const res = await fetch("/api/chat", {
+      const res = await fetch(`${baseUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: input }),
       });
 
-      const data = await res.json(); 
+      const data = await res.json();
 
       if (!res.ok) {
-      
         setMessages((prev) => [
           ...prev,
           { sender: "bot", text: data.reply || t("somethingWentWrong") },
         ]);
-        return;
+      } else {
+        const botMessage: Message = {
+          sender: "bot",
+          text: data.reply,
+        };
+        setMessages((prev) => [...prev, botMessage]);
       }
-
-      const botMessage: Message = {
-        sender: "bot",
-        text: data.reply,
-      };
-
-      setMessages((prev) => [...prev, botMessage]);
       setInput("");
     } catch {
-      // Om det blir ett nätverksfel eller något annat riktigt knas
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: t("somethingWentWrong") },
       ]);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -70,6 +73,12 @@ export const WilmaBot = () => {
             <div className="wilma-bot__text">{msg.text}</div>
           </div>
         ))}
+
+        {loading && (
+          <div className="wilma-bot__message wilma-bot__message--bot">
+            <div className="wilma-bot__text">{t("sendingMessage") || "Skickar fråga..."}</div>
+          </div>
+        )}
       </div>
 
       <img
@@ -87,8 +96,13 @@ export const WilmaBot = () => {
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           className="wilma-bot__input"
+          disabled={loading}
         />
-        <button onClick={sendMessage} className="wilma-bot__button">
+        <button
+          onClick={sendMessage}
+          className="wilma-bot__button"
+          disabled={loading || !input.trim()}
+        >
           {t("send")}
         </button>
       </div>
