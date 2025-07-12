@@ -20,7 +20,7 @@ export const WilmaBot = () => {
     if (lastMessageRef.current) {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [messages]);
+  }, [messages, loading]);
 
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
@@ -88,15 +88,11 @@ export const WilmaBot = () => {
         ))}
 
         {loading && (
-          <div
-            className="wilma-bot__message wilma-bot__message--bot"
-            ref={lastMessageRef}
-          >
-            <div className="wilma-bot__text">
-              {t("sendingMessage") || "Skickar fråga..."}
-            </div>
-          </div>
-        )}
+        <div className="wilma-bot__loading-spinner" ref={lastMessageRef}>
+          <div className="spinner" aria-label="Loading..."></div>
+        </div>
+      )}
+
       </div>
 
       <img

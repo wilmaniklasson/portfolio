@@ -155,7 +155,7 @@
 .description {
     padding: 0;
     margin: 0;
-    max-width: 660px;
+    max-width: 665px;
     font-size: 1.5em;
     font-weight: lighter;
 }
@@ -183,6 +183,31 @@
         transform: translateY(0);
     }
 }
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+
+
 
 #animated-text {
     animation: slideIn 1s ease-in-out;
@@ -243,11 +268,13 @@
         top: 0;
         left: 0;
         width: 100%;
+        height: 100%;
         text-align: center;
         align-items: center;
         background-color: #333;
         box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
         z-index: 1;
+        animation: slideInFromTop 0.5s ease-in-out;
     }
 
 
