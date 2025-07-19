@@ -15,12 +15,20 @@ export const WilmaBot = () => {
   const { t } = useTranslation();
 
   const lastMessageRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
 
   useEffect(() => {
     if (lastMessageRef.current) {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [messages, loading]);
+
+  useEffect(() => {
+    if (!loading) {
+      inputRef.current?.focus();
+    }
+  }, [loading]);
 
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
@@ -61,7 +69,6 @@ export const WilmaBot = () => {
         }
       }
 
-      setInput("");
     } catch {
       setMessages((prev) => [
         ...prev,
@@ -69,6 +76,7 @@ export const WilmaBot = () => {
       ]);
     } finally {
       setLoading(false);
+      setInput("");
     }
   };
 
@@ -88,11 +96,10 @@ export const WilmaBot = () => {
         ))}
 
         {loading && (
-        <div className="wilma-bot__loading-spinner" ref={lastMessageRef}>
-          <div className="spinner" aria-label="Loading..."></div>
-        </div>
-      )}
-
+          <div className="wilma-bot__loading-spinner" ref={lastMessageRef}>
+            <div className="spinner" aria-label="Loading..."></div>
+          </div>
+        )}
       </div>
 
       <img
@@ -104,6 +111,7 @@ export const WilmaBot = () => {
 
       <div className="wilma-bot__input-area">
         <input
+          ref={inputRef}
           type="text"
           value={input}
           placeholder={t("writeAMessage")}
@@ -111,6 +119,7 @@ export const WilmaBot = () => {
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           className="wilma-bot__input"
           disabled={loading}
+          autoFocus
         />
         <button
           onClick={sendMessage}
