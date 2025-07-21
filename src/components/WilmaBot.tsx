@@ -16,8 +16,7 @@ export const WilmaBot = () => {
 
   const lastMessageRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
-
+  const hasSentMessageRef = useRef(false);
   useEffect(() => {
     if (lastMessageRef.current) {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -25,7 +24,7 @@ export const WilmaBot = () => {
   }, [messages, loading]);
 
   useEffect(() => {
-    if (!loading) {
+    if (hasSentMessageRef.current && !loading) {
       inputRef.current?.focus();
     }
   }, [loading]);
@@ -33,6 +32,7 @@ export const WilmaBot = () => {
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
 
+    hasSentMessageRef.current = true; 
     setLoading(true);
 
     const userMessage: Message = {
@@ -119,7 +119,6 @@ export const WilmaBot = () => {
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
           className="wilma-bot__input"
           disabled={loading}
-          autoFocus
         />
         <button
           onClick={sendMessage}
