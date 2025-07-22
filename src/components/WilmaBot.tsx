@@ -16,6 +16,7 @@ export const WilmaBot = () => {
 
   const lastMessageRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const chatboxRef = useRef<HTMLDivElement>(null);
   const hasSentMessageRef = useRef(false);
   useEffect(() => {
     if (lastMessageRef.current) {
@@ -28,6 +29,33 @@ export const WilmaBot = () => {
       inputRef.current?.focus();
     }
   }, [loading]);
+
+  useEffect(() => {
+  const hasSeenWelcome = localStorage.getItem("hasSeenWelcome");
+
+  if (hasSeenWelcome || !chatboxRef.current) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        const welcomeMessage: Message = {
+          sender: "bot",
+          text: t("welcomeMessage"),
+        };
+
+        setMessages([welcomeMessage]);
+        localStorage.setItem("hasSeenWelcome", "true");
+        observer.disconnect();
+      }
+    },
+    { threshold: 0.5 } 
+  );
+
+  observer.observe(chatboxRef.current);
+
+  return () => observer.disconnect();
+}, [t]);
+
 
   const sendMessage = async () => {
     if (!input.trim() || loading) return;
@@ -81,7 +109,7 @@ export const WilmaBot = () => {
   };
 
   return (
-    <div className="wilma-bot">
+    <div className="wilma-bot" ref={chatboxRef}>
       <h2 className="wilma-bot__title">{t("askSomething")}</h2>
 
       <div className="wilma-bot__chatbox">
